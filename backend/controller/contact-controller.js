@@ -1,4 +1,7 @@
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require('express-async-handler');
+const { Error } = require('mongoose');
+
+const Contact = require('../models/contact-models');
 
 /**
  *
@@ -8,11 +11,15 @@ const asyncHandler = require('express-async-handler')
  */
 const createContact = asyncHandler(async (req, res) => {
   const { name, email, country } = req.body;
-  console.log('lol', name, email, country);
   if (!name || !email || !country) {
     res.status(400);
     throw new Error('All fields required');
   }
+  const newContact = await Contact.create({
+    name,
+    email,
+    country,
+  });
   res.status(201).json({
     msg: 'Contact Created',
     data: req.body,
@@ -26,8 +33,10 @@ const createContact = asyncHandler(async (req, res) => {
  * @access PUBLIC
  */
 const getAllContacts = asyncHandler(async (req, res) => {
+  const contactList = await Contact.find();
   res.status(200).json({
     msg: ' Fetch all the contacts',
+    data: contactList,
   });
 });
 
@@ -38,8 +47,14 @@ const getAllContacts = asyncHandler(async (req, res) => {
  * @access PUBLIC
  */
 const getContactsBasedonID = asyncHandler(async (req, res) => {
+  const contact = await Contact.findById(req.params.id);
+  if (!contact) {
+    res.status(404);
+    throw new Error('ID Not Found');
+  }
   res.status(200).json({
     msg: ' Fetch contact based on id',
+    data: contact,
   });
 });
 
@@ -50,8 +65,16 @@ const getContactsBasedonID = asyncHandler(async (req, res) => {
  * @access PUBLIC
  */
 const updateContactsBasedonID = asyncHandler(async (req, res) => {
+  const contact = await Contact.findById(req.params.id);
+  if (!contact) {
+    res.status(404);
+    throw new Error('ID Not Found');
+  }
+
+  const updatedContact = await Contact.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.status(200).json({
     msg: ' Update contact based on id',
+    data: updatedContact,
   });
 });
 
@@ -62,8 +85,15 @@ const updateContactsBasedonID = asyncHandler(async (req, res) => {
  * @access PUBLIC
  */
 const deleteContactsBasedonID = asyncHandler(async (req, res) => {
+  const contact = await Contact.findById(req.params.id);
+  if (!contact) {
+    res.status(404);
+    throw new Error('ID Not Found');
+  }
+  await Contact.findByIdAndRemove(req.params.id);
   res.status(200).json({
     msg: ' Delete contact based on id',
+    data: contact,
   });
 });
 
