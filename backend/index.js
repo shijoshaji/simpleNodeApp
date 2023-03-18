@@ -8,7 +8,9 @@ const bodyParser = require('body-parser');
 // imports
 const contactRoute = require('./routes/contact-routes');
 const errHandler = require('./middleware/errHandler');
+const { connectDB } = require('./config/dbConnect');
 
+connectDB();
 //
 app.listen(PORT, () => {
   console.log(`server running in port ${PORT}`);
