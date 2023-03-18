@@ -1,6 +1,4 @@
 const asyncHandler = require('express-async-handler');
-const { Error } = require('mongoose');
-
 const Contact = require('../models/contact-models');
 
 /**
