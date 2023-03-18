@@ -1,10 +1,12 @@
+const asyncHandler = require('express-async-handler')
+
 /**
  *
  * @desc Create Contacts
  * @route POST api/contacts
  * @access PUBLIC
  */
-const createContact = (req, res) => {
+const createContact = asyncHandler(async (req, res) => {
   const { name, email, country } = req.body;
   console.log('lol', name, email, country);
   if (!name || !email || !country) {
@@ -15,7 +17,7 @@ const createContact = (req, res) => {
     msg: 'Contact Created',
     data: req.body,
   });
-};
+});
 
 /**
  *
@@ -23,11 +25,11 @@ const createContact = (req, res) => {
  * @route GET api/contacts
  * @access PUBLIC
  */
-const getAllContacts = (req, res) => {
+const getAllContacts = asyncHandler(async (req, res) => {
   res.status(200).json({
     msg: ' Fetch all the contacts',
   });
-};
+});
 
 /**
  *
@@ -35,11 +37,11 @@ const getAllContacts = (req, res) => {
  * @route GET api/contacts/:id
  * @access PUBLIC
  */
-const getContactsBasedonID = (req, res) => {
+const getContactsBasedonID = asyncHandler(async (req, res) => {
   res.status(200).json({
     msg: ' Fetch contact based on id',
   });
-};
+});
 
 /**
  *
@@ -47,11 +49,11 @@ const getContactsBasedonID = (req, res) => {
  * @route PUT api/contacts/:id
  * @access PUBLIC
  */
-const updateContactsBasedonID = (req, res) => {
+const updateContactsBasedonID = asyncHandler(async (req, res) => {
   res.status(200).json({
     msg: ' Update contact based on id',
   });
-};
+});
 
 /**
  *
@@ -59,11 +61,11 @@ const updateContactsBasedonID = (req, res) => {
  * @route DELETE api/contacts/:id
  * @access PUBLIC
  */
-const deleteContactsBasedonID = (req, res) => {
+const deleteContactsBasedonID = asyncHandler(async (req, res) => {
   res.status(200).json({
     msg: ' Delete contact based on id',
   });
-};
+});
 
 module.exports = {
   createContact,
