@@ -1,0 +1,74 @@
+/**
+ *
+ * @desc Create Contacts
+ * @route POST api/contacts
+ * @access PUBLIC
+ */
+const createContact = (req, res) => {
+  const { name, email, country } = req.body;
+  console.log('lol', name, email, country);
+  if (!name || !email || !country) {
+    res.status(400);
+    throw new Error('All fields required');
+  }
+  res.status(201).json({
+    msg: 'Contact Created',
+    data: req.body,
+  });
+};
+
+/**
+ *
+ * @desc Get All Contacts
+ * @route GET api/contacts
+ * @access PUBLIC
+ */
+const getAllContacts = (req, res) => {
+  res.status(200).json({
+    msg: ' Fetch all the contacts',
+  });
+};
+
+/**
+ *
+ * @desc Get Contacts based on ID
+ * @route GET api/contacts/:id
+ * @access PUBLIC
+ */
+const getContactsBasedonID = (req, res) => {
+  res.status(200).json({
+    msg: ' Fetch contact based on id',
+  });
+};
+
+/**
+ *
+ * @desc Update Contacts based on ID
+ * @route PUT api/contacts/:id
+ * @access PUBLIC
+ */
+const updateContactsBasedonID = (req, res) => {
+  res.status(200).json({
+    msg: ' Update contact based on id',
+  });
+};
+
+/**
+ *
+ * @desc Delete Contacts based on ID
+ * @route DELETE api/contacts/:id
+ * @access PUBLIC
+ */
+const deleteContactsBasedonID = (req, res) => {
+  res.status(200).json({
+    msg: ' Delete contact based on id',
+  });
+};
+
+module.exports = {
+  createContact,
+  getAllContacts,
+  getContactsBasedonID,
+  updateContactsBasedonID,
+  deleteContactsBasedonID,
+};
