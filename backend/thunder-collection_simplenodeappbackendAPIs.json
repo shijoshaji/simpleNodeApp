@@ -1,0 +1,109 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "simplenodeappbackendAPIs",
+    "dateExported": "2023-03-18T06:29:29.127Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "487466eb-8fda-43f1-b9b8-d135449541f7",
+            "colId": "2157ec1b-13d6-4560-b255-7f9cf2927c40",
+            "containerId": "",
+            "name": "fetchAllContacts",
+            "url": "http://localhost:5001/api/contacts/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-03-18T02:38:13.632Z",
+            "modified": "2023-03-18T03:28:45.965Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "56ee0672-6327-48fa-8782-ece5b9f1aedf",
+            "colId": "2157ec1b-13d6-4560-b255-7f9cf2927c40",
+            "containerId": "",
+            "name": "createContacts",
+            "url": "http://localhost:5001/api/contacts/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-03-18T03:29:05.462Z",
+            "modified": "2023-03-18T05:59:49.136Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"seljo\",\n    \"email\": \"sh.ijo@gmail.com\",\n    \"country\": \"IND\"\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fb59fd60-d3ad-4b75-b836-55f4bda5359f",
+            "colId": "2157ec1b-13d6-4560-b255-7f9cf2927c40",
+            "containerId": "",
+            "name": "updateContacts",
+            "url": "http://localhost:5001/api/contacts/64155355aaf223186970a769",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-03-18T03:29:35.155Z",
+            "modified": "2023-03-18T06:15:56.995Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "seljo shaji"
+                    },
+                    {
+                        "name": "country",
+                        "value": "CAD"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "2d790d9a-ab12-45ca-a0e8-f4af2e4bf934",
+            "colId": "2157ec1b-13d6-4560-b255-7f9cf2927c40",
+            "containerId": "",
+            "name": "deleteContacts",
+            "url": "http://localhost:5001/api/contacts/641552b74dd979d70adcd4dd",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-03-18T03:29:59.512Z",
+            "modified": "2023-03-18T06:18:55.801Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e661d30b-5bf7-45bd-9a86-a6c7750e98f7",
+            "colId": "2157ec1b-13d6-4560-b255-7f9cf2927c40",
+            "containerId": "",
+            "name": "getContactofID",
+            "url": "http://localhost:5001/api/contacts/64155355aaf223186970a769",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-03-18T03:31:01.052Z",
+            "modified": "2023-03-18T06:11:12.752Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
