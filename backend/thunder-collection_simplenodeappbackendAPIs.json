@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "simplenodeappbackendAPIs",
-    "dateExported": "2023-03-18T06:29:29.127Z",
+    "dateExported": "2023-03-20T17:26:09.533Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -39,12 +39,12 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-03-18T03:29:05.462Z",
-            "modified": "2023-03-18T05:59:49.136Z",
+            "modified": "2023-03-20T16:37:02.649Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n    \"name\": \"seljo\",\n    \"email\": \"sh.ijo@gmail.com\",\n    \"country\": \"IND\"\n  }",
+                "raw": "{\n    \"name\": \"shijo\",\n    \"email\": \"sh.ijo@gmail.com\",\n    \"country\": \"IND\"\n  }",
                 "form": []
             },
             "tests": []
@@ -101,6 +101,80 @@
             "sortNum": 50000,
             "created": "2023-03-18T03:31:01.052Z",
             "modified": "2023-03-18T06:11:12.752Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3fca9236-167b-4947-830a-7c15b8c1fc43",
+            "colId": "2157ec1b-13d6-4560-b255-7f9cf2927c40",
+            "containerId": "",
+            "name": "userRegister",
+            "url": "http://localhost:5001/api/users/register",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-03-20T16:45:38.641Z",
+            "modified": "2023-03-20T17:24:41.340Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "shijoX"
+                    },
+                    {
+                        "name": "email",
+                        "value": "xsh.ijo@gme.co"
+                    },
+                    {
+                        "name": "password",
+                        "value": "testshijohashed"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "7ec19ab3-8722-45af-b85b-a50435fd1ead",
+            "colId": "2157ec1b-13d6-4560-b255-7f9cf2927c40",
+            "containerId": "",
+            "name": "userLogin",
+            "url": "http://localhost:5001/api/users/login",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-03-20T16:48:40.214Z",
+            "modified": "2023-03-20T16:48:54.890Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3c280e26-6e81-4799-a3d8-3a7ce09cac4c",
+            "colId": "2157ec1b-13d6-4560-b255-7f9cf2927c40",
+            "containerId": "",
+            "name": "currentUser",
+            "url": "http://localhost:5001/api/users/current",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-03-20T16:49:05.352Z",
+            "modified": "2023-03-20T16:49:18.021Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "605562d1-435f-48e6-ba54-3c320ccc3364",
+            "colId": "2157ec1b-13d6-4560-b255-7f9cf2927c40",
+            "containerId": "",
+            "name": "getAllUsers",
+            "url": "http://localhost:5001/api/users/all",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-03-20T17:10:51.439Z",
+            "modified": "2023-03-20T17:10:58.156Z",
             "headers": [],
             "params": [],
             "tests": []

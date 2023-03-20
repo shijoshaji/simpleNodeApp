@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 
 // imports
 const contactRoute = require('./routes/contact-routes');
+const userRoute = require('./routes/user-routes');
 const errHandler = require('./middleware/errHandler');
 const { connectDB } = require('./config/dbConnect');
 
@@ -28,4 +29,5 @@ app.listen(PORT, () => {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/api', contactRoute);
+app.use('/api', userRoute);
 app.use(errHandler);
