@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "simplenodeappbackendAPIs",
-    "dateExported": "2023-03-20T17:26:09.533Z",
+    "dateExported": "2023-03-20T18:10:28.105Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -146,9 +146,23 @@
             "method": "POST",
             "sortNum": 70000,
             "created": "2023-03-20T16:48:40.214Z",
-            "modified": "2023-03-20T16:48:54.890Z",
+            "modified": "2023-03-20T17:59:14.146Z",
             "headers": [],
             "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "email",
+                        "value": "xsh.ijo@gme.co"
+                    },
+                    {
+                        "name": "password",
+                        "value": "testshijohashed"
+                    }
+                ]
+            },
             "tests": []
         },
         {
@@ -160,9 +174,27 @@
             "method": "GET",
             "sortNum": 80000,
             "created": "2023-03-20T16:49:05.352Z",
-            "modified": "2023-03-20T16:49:18.021Z",
+            "modified": "2023-03-20T18:09:06.523Z",
             "headers": [],
             "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "email",
+                        "value": "xsh.ijo@gme.co"
+                    },
+                    {
+                        "name": "password",
+                        "value": "testshijohashed"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoic2hpam9YIiwiZW1haWxsIjoieHNoLmlqb0BnbWUuY28iLCJpZCI6IjY0MTg5NmQ5NDU5NjQzZGFjMTBhNjY5OCJ9LCJpYXQiOjE2NzkzMzU3MDEsImV4cCI6MTY3OTMzNTc2MX0.kKbOabjnl-7CG895ZskHrEhawK82ba2spM1Z2M1isu8"
+            },
             "tests": []
         },
         {
